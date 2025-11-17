@@ -564,7 +564,8 @@ def final_ppt_scoring(audio_score, video_score, method="simple", weights=None):
 class StreamlitApp:
     def __init__(self):
         # self.temp_dir = tempfile.mkdtemp()
-        self.temp_dir = os.path.join("D:\M.Tech_3rd sem\Streamlit_Temp")
+        self.temp_dir = tempfile.mkdtemp()
+
         os.makedirs(self.temp_dir, exist_ok=True)
 
         self.audio_processor = AudioProcessor(self.temp_dir)
